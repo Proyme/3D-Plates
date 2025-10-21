@@ -1,0 +1,166 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                        🎉 BIENVENUE DANS 3D-PLATES 🎉                    ║
+║                                                                           ║
+║          Application de Reconstruction 3D d'Objets par IA                ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+📋 DÉMARRAGE RAPIDE
+═══════════════════════════════════════════════════════════════════════════
+
+1️⃣  LIRE LA DOCUMENTATION
+   └─ Ouvrez DEMARRAGE_RAPIDE.md pour commencer en 5 minutes
+
+2️⃣  INSTALLER LES PRÉREQUIS
+   ├─ Node.js 20+ : https://nodejs.org/
+   ├─ Python 3.8+ : https://www.python.org/
+   ├─ Expo Go sur votre téléphone
+   └─ FFmpeg : choco install ffmpeg (Windows)
+
+3️⃣  DÉMARRER L'APPLICATION MOBILE
+   ├─ Double-cliquez sur start.bat (Windows)
+   └─ Ou exécutez : npm install && npx expo start
+
+4️⃣  DÉMARRER LE SERVEUR
+   ├─ Allez dans le dossier server/
+   ├─ Double-cliquez sur start_server.bat (Windows)
+   └─ Ou exécutez : python app.py
+
+5️⃣  CONFIGURER L'ADRESSE IP
+   ├─ Trouvez votre IP : ipconfig (Windows)
+   ├─ Modifiez screens/ProcessingScreen.js ligne 11
+   └─ Remplacez YOUR_SERVER_IP par votre IP
+
+6️⃣  TESTER L'APPLICATION
+   ├─ Scannez le QR code avec Expo Go
+   ├─ Filmez un objet pendant 15-30 secondes
+   └─ Visualisez le résultat en 3D !
+
+
+📚 DOCUMENTATION DISPONIBLE
+═══════════════════════════════════════════════════════════════════════════
+
+📄 README.md                  → Documentation complète du projet
+📄 DEMARRAGE_RAPIDE.md        → Guide pour démarrer en 5 minutes
+📄 GUIDE_UTILISATION.md       → Comment utiliser l'application
+📄 ARCHITECTURE.md            → Architecture technique du projet
+📄 CONTRIBUTING.md            → Comment contribuer au projet
+📄 FAQ.md                     → Questions fréquentes
+📄 CHANGELOG.md               → Historique des versions
+📄 server/README.md           → Documentation du serveur
+
+
+🎯 CONSEILS POUR VOTRE PREMIER SCAN
+═══════════════════════════════════════════════════════════════════════════
+
+✅ Choisissez un objet simple (tasse, figurine, jouet)
+✅ Placez-le sur une surface neutre (blanc, gris)
+✅ Utilisez un bon éclairage (lumière naturelle)
+✅ Filmez pendant 20-30 secondes
+✅ Tournez lentement autour de l'objet
+✅ Gardez l'objet au centre de l'écran
+
+❌ Évitez les objets réfléchissants (miroirs, métal)
+❌ Évitez les objets transparents (verre)
+❌ Ne bougez pas trop vite
+❌ N'incluez pas le sol/table dans le cadre
+
+
+🔧 DÉPANNAGE RAPIDE
+═══════════════════════════════════════════════════════════════════════════
+
+❓ "Cannot connect to server"
+   → Vérifiez que le serveur est démarré
+   → Vérifiez l'adresse IP dans ProcessingScreen.js
+   → Assurez-vous d'être sur le même réseau Wi-Fi
+
+❓ "CUDA not available"
+   → Vérifiez : nvidia-smi
+   → Réinstallez PyTorch avec CUDA
+
+❓ "FFmpeg not found"
+   → Installez FFmpeg : choco install ffmpeg
+
+❓ Le QR code ne s'affiche pas
+   → Essayez : npx expo start --clear
+   → Ou : npx expo start --tunnel
+
+
+📞 BESOIN D'AIDE ?
+═══════════════════════════════════════════════════════════════════════════
+
+1. Consultez la FAQ.md
+2. Lisez la documentation complète
+3. Ouvrez une issue sur GitHub
+
+
+🎓 RESSOURCES UTILES
+═══════════════════════════════════════════════════════════════════════════
+
+• Documentation Expo : https://docs.expo.dev/
+• Documentation Flask : https://flask.palletsprojects.com/
+• PyTorch : https://pytorch.org/
+• Three.js : https://threejs.org/
+
+
+⚠️  IMPORTANT - LISEZ CECI
+═══════════════════════════════════════════════════════════════════════════
+
+🔴 Le modèle 3D actuel est un PLACEHOLDER (cube simple)
+   Pour une vraie reconstruction 3D, vous devez intégrer :
+   • NVIDIA Instant-NGP (recommandé pour RTX 4090)
+   • Nerfstudio
+   • 3D Gaussian Splatting
+   
+   Consultez server/README.md pour les instructions d'intégration.
+
+🔴 Pas d'authentification dans cette version
+   N'utilisez PAS pour des données sensibles en production.
+   Ajoutez l'authentification avant le déploiement public.
+
+🔴 Nécessite un GPU NVIDIA avec CUDA
+   Le serveur fonctionne sur CPU mais sera 10x plus lent.
+
+
+📊 STRUCTURE DU PROJET
+═══════════════════════════════════════════════════════════════════════════
+
+3D-Plates/
+├── screens/              → Écrans de l'application mobile
+├── server/              → Serveur backend Python
+├── assets/              → Images et ressources
+├── App.js               → Point d'entrée de l'app
+├── start.bat            → Script de démarrage (Windows)
+└── [Documentation]      → Tous les fichiers .md
+
+
+🚀 PROCHAINES ÉTAPES
+═══════════════════════════════════════════════════════════════════════════
+
+1. Lisez DEMARRAGE_RAPIDE.md
+2. Installez les prérequis
+3. Démarrez l'application et le serveur
+4. Testez avec un objet simple
+5. Consultez GUIDE_UTILISATION.md pour optimiser vos scans
+6. Intégrez un vrai modèle ML (voir server/README.md)
+
+
+💡 ASTUCE
+═══════════════════════════════════════════════════════════════════════════
+
+Pour votre premier test, utilisez une tasse ou une figurine sur une
+surface blanche avec une bonne lumière naturelle. Filmez pendant 20-30
+secondes en tournant lentement autour. C'est le meilleur moyen de
+comprendre comment fonctionne l'application !
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                        Bon scan 3D ! 🎉
+
+                    Créé avec ❤️ par un développeur indépendant
+                    
+                    Licence MIT - Open Source
+                    
+═══════════════════════════════════════════════════════════════════════════

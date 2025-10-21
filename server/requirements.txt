@@ -1,0 +1,13 @@
+flask==3.0.0
+flask-cors==4.0.0
+torch==2.1.0
+torchvision==0.16.0
+werkzeug==3.0.1
+pillow==10.1.0
+numpy==1.24.3
+opencv-python==4.8.1.78
+
+# Optional: For advanced 3D reconstruction
+# nerfstudio==1.0.0
+# instant-ngp (requires manual installation)
+# gaussian-splatting (requires manual installation)
