@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
-import * as FileSystem from 'expo-file-system';
 
 // ⚠️ IMPORTANT: CONFIGURATION DU SERVEUR ⚠️
 // Remplacez YOUR_SERVER_IP par l'adresse IP de votre serveur
@@ -18,7 +17,7 @@ import * as FileSystem from 'expo-file-system';
 // Pour trouver votre IP: 
 //   - Windows: ipconfig
 //   - Linux/Mac: ifconfig ou ip addr show
-const SERVER_URL = 'http://YOUR_SERVER_IP:5000';
+const SERVER_URL = 'https://wcpcp2eqd14pe6-8000.proxy.runpod.net';
 
 export default function ProcessingScreen({ route, navigation }) {
   const { videoUri } = route.params;
@@ -38,9 +37,6 @@ export default function ProcessingScreen({ route, navigation }) {
 
       // Prepare form data
       const formData = new FormData();
-      
-      // Get file info
-      const fileInfo = await FileSystem.getInfoAsync(videoUri);
       
       formData.append('video', {
         uri: videoUri,
